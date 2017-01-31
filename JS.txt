@@ -1,0 +1,126 @@
+scope - zakres dostepnosci zmiennych
+-globalny 
+-blokowy
+-funkcyjny(po prostu w bloku funkcji)
+
+DEFINIOWANIE ZMIENNYCH:
+var aa=1   --->  zasieg globalny
+const aa=1 ]
+led aa=1   ]-----> zasieg blokowy/ lokalny
+aa=1       
+var obj={}  ---> definiuje pusty obiekt
+obj.a=1 ---> przypisanie zmiennej do obiektu (wlasciwosc)
+obj.b= function(){return 1;}
+var obj={hand:2, leg:"nogi"}
+
+JS W NARZEDZIACH DEVELOPERSKICH GOOGLA
+-f12
+-sources
+-snippets
+-new
+CTRL+/ komentuje linijke
+
+
+KOMENDY/METODY
+console.log("jakis tekst", ZMIENNA1, INNE ZMIENNE); wyswietla zmienne na konsoli(printline)
+alert(str); wyskakuje okienko z informacja. okienko blokuje wywolywanie kodu dopiero po kloknieciu ok kod dalej dziala
+typeof zmienna; zwraca typ zmiennej lub metody
+
+WIELOLINIJKOWE STRINGI
+"" oraz '' to to samo i trzeba pisac tekst w 1 linijce natomiast `` pozwala pisac tekst w kilku linijkach 
+
+ANEGDOTKA
+wiecie co to jest lower camel case ? to jak macie nazwe zmiennej twoja stara to T i S jest z duzej
+
+FUNKCJE
+funktion funkcja(arg, arg2){return 5;}
+-to co zwracamy musi byc w tej samej linijce co slowo return;
+
+KSIAZKI
+kaj simson(autor)
+the good parts
+kanal na yt funfunfunction
+
+BOOL
+false jest traktowane jak 0 a true jak 1 ae doslowniej niz w javie- patrz konwersja
+wartosci falszywe :    false, 0, "", null, NaN, undefinied
+
+KONWERSJA
+konwersja jawna == rzutowanie == String(111)
+konwersje niejawne 1+true=2,  1+"aaa"=1aaa, false-123=-123
+
+POROWNYWANIE
+operator rownosci ==      123=="123"   true  (bo  niejawna konwersja) 
+operator identycznosci=== 123==="123"  false (nie ma konwersji)
+
+TABLICE
+moga przechowywac naraz rozne rodzaje zmiennych
+
+PRZYDATNE BIBLIOTEKI
+lodash 
+underscore
+
+WAZNE PROGRAMY
+GULP
+GRUNT
+WEBPACK
+VIM cd mkdir touch rm 
+NPM
+
+STRONY: 
+kursjs.pl
+jsfiddle
+
+OGARNAC
+"use strict"
+hoisting
+event loop
+funkcja samowywolujaca sie
+promise'y
+
+FUNKCJA SAMOWYWOLUJACA SIE i  ANONIMOWA
+wywoluje sie w miejscu deklaracji
+(function(){})();
+nazywa sie to IIFE
+
+HOISTING
+-funkcje:
+	-mozna wywolac wynkcje przed jej zadeklarowaniem
+	-jesli przy deklaracji zmiennej dam jej wartosc ktora bedzie deklaracja funkcji to powyzsze nie zadziala var a = function funkcja() {}
+
+EDYTOWANIE HTML ZA POMOCA JS
+
+https://jsfiddle.net/kb2swvn5/10/
+https://jsfiddle.net/AH1N1/hvz3mnvz/4/
+https://jsfiddle.net/AH1N1/z7n5ebxL/1/
+https://jsfiddle.net/AH1N1/7cf1opo8/
+https://jsfiddle.net/AH1N1/ovprdv9f/
+https://jsfiddle.net/AH1N1/u7s8vg6r/7/
+https://jsfiddle.net/AH1N1/L1f0j7ze/3/
+https://jsfiddle.net/AH1N1/74cdod9z/9/
+
+METODY
+prompt- alert z miejscem na woisanie tekstu
+$(zmienna) == "{0}", zmienna
+setTimeout()
+interval (jakos od slowa interwal)
+
+PROTOTYPY
+funkcja ktora jest substytutem klasy i po przypisaniu do zmiennej jest odpowiednikiem instancji
+=====================================================
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName;
+};
+var myFather = new Person("John", "Doe", 50, "blue");
+alert("My father is " + myFather.name());
+=====================================================
+
+CALLBACK
+funkcja przekazana do innej funkcji jako parametr
+

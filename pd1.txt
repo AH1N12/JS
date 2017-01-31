@@ -1,0 +1,25 @@
+
+//z uwzglednieniem wielkosci liter
+function isPalindrom1(a){
+    for(let i=0;i<a.length;i++){
+        if(a[i]!==a[(a.length- 1 -i)]) return a + " nie jest palindromem";        
+    }
+     return a + " jest palindromem";
+   
+
+}
+
+
+//bez uwzglednienia wielkosci liter
+function isPalindrom2(b){
+    for(let i=0;i<b.length;i++){
+        if(b[i].toUpperCase() !=b[(b.length- 1 -i)].toUpperCase()) return b + " nie jest palindromem";        
+    }
+     return "wyraz " + b + " jest palindromem";
+   
+
+}
+
+
+console.log(isPalindrom1("AdA"));
+console.log(isPalindrom2("Ala"));

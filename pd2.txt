@@ -1,0 +1,21 @@
+//wrzuca spacje przed kazdym znakiem
+function insertSpace(x) {
+  let y = x.replace(/ /g, '').split('').join(' ');
+  return y;
+}
+alert(insertSpace("abcdef ghi ja"));
+
+//zamienia wielkosc liter i nie dziala :(
+function upperAndLower(x) {
+let y = x;
+  for (let i = 0; i < x.length; i++) {
+    if (x[i].toUpperCase() === x[i]) {
+      y[i] = x[i].toLowerCase();      
+    } else {
+      y[i] = x[i].toUpperCase();
+    }
+  }
+
+  return y;
+}
+alert(upperAndLower("AbcD"));
